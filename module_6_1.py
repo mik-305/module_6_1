@@ -1,16 +1,16 @@
-class Plant:
-    edible = False
+class Plant:               # Создан класс Растения
+    edible = False         # Съедобное - не съедобное
     def __init__(self, name):
         self.name = name
-class Animal:
-    alive = True
-    fed = False
+class Animal:             # Создан класс Животные
+    alive = True          # Зверь жив
+    fed = False           # Зверь не сыт
     def __init__(self, name):
         self.name = name
     def eat(self, food: Plant):
         if food.edible:
             print(f'{self.name} съел {food.name}')
-            self.fed = True
+            self.fed = True # Зверь насытился и выжил
         else:
             print(f'{self.name} не стал есть  {food.name}')
             self.alive = False
